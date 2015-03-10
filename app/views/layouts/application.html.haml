@@ -1,0 +1,24 @@
+!!!
+%html
+  %head
+    %title FinalProj
+    %meta{:charset => "utf-8"}
+      %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}
+        %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}
+        = javascript_include_tag 'application', 'data-turbolinks-track' => true
+        = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+        = csrf_meta_tags
+  %body
+    .navbar
+      =render 'layouts/navbar'
+    %input#sidebartoggler{:type => "checkbox"}/
+    .page-wrapper
+      %label.toggle{:for => "sidebartoggler"} ☰
+      .page-content
+        = yield
+      .sidebar
+        %li.navslide Home
+        %li.navslide Projects
+        %li.navslide Clients
+        %li.navslide Blog
+        %li.navslide Contact

@@ -13,7 +13,7 @@
       =render 'layouts/navbar'
     %input#sidebartoggler{:type => "checkbox"}/
     .page-wrapper
-      %label.toggle{:for => "sidebartoggler"} ☰
+      %label.close.toggle{:for => "sidebartoggler"} ☰
       .page-content
         = yield
       .sidebar
